@@ -1,0 +1,421 @@
+@media screen and (max-width:990px) {
+    
+    body.scroll_off{
+        overflow-y: hidden;
+    }
+    .container{
+        padding: 0 25px;
+    }
+    .menu{
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 250px;
+        background-color: var(--white-color-low);
+        height: 100vh;
+        z-index: 1000;
+        overflow: auto;
+        display: block;
+        transform-origin: right top;
+        transform: rotate(-90deg);
+        transition: 0.5s;
+        transition-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
+        opacity: 0;
+    }
+    .logo{
+        padding: 14px 0;
+        transition: 0.3s;
+    }
+    .header_active .logo{
+        padding: 3px 0;
+    }
+    .menu.active{
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    .toggle_btn{
+        display: flex;
+    }
+    li.links{
+        width: 100%;
+        padding: 0;
+    }
+    a.link{
+        width: 100%;
+        text-align: center;
+        color: var(--black-color) !important;
+    }
+    a.link::after{
+        /* content: none; */
+        display: none;
+    }
+    a.link.active_link , a.link:hover{
+        color: var(--main-color) !important;
+    }
+    .close_btn{
+        display: flex;
+    }
+    
+    .menu_overlay.active{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* home section responsive -------------- */
+    .home_content{
+        margin-left: 50px;
+    }
+    #home .home_desc{
+        width: 80%;
+    }
+
+    /* about section responsive -------------- */
+    .about_item:first-child{
+        flex-basis: 40%;
+    }
+    .about_item:nth-child(2){
+        flex-basis: 55%;
+    }
+    .about_item img{
+        width: 294px;
+        height: 380px;
+    }
+    .about_title{
+        font-size: 23px;
+    }
+
+    /* service section responsive ------------- */
+    .service_title{
+        font-size: 20px;
+    }
+    .service_title{
+        word-spacing: 80px;
+    }
+
+    /* contact section responsive ------------ */
+    .contact_informations{
+        padding-left: 30px;
+        flex-basis: 40%;
+    }
+    .contact_right{
+        flex-basis: 58%;
+    }
+
+    /* social links -------- */
+    .social_item{
+        top: 80px;
+    }
+    .social_item.scroll_top{
+        top: 59px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .single_project{
+        flex-basis: 48%;
+    }
+    
+    /* home section responsive ----------------- */
+    .home_content{
+        margin-left: 40px;
+    }
+    #home .home_desc{
+        width: 100%;
+        padding-right: 5%;
+    }
+    #home .hometitle{
+        font-size: 40px;
+    }
+
+    /* about section responsive ------------- */
+    .about_item img{
+        width: 220px;
+        height: 300px;
+    }
+
+    /* service section responsive ---------- */
+    .single_service {
+        flex-basis: 45%;
+        margin-bottom: 35px;
+    }
+    .single_service.active:first-child{
+        transform: translateX(90%);
+    }
+    .single_service.active:nth-child(2){
+        transform: translateX(0%);
+    }
+    .single_service.active:nth-child(3){
+        transform: translateX(122%);
+    }
+    .single_service.active:nth-child(3) .single_service_wrapper{
+        transform: rotateY(-55deg);
+    }
+    .service_title{
+        word-spacing: 0px;
+    }
+    .service_explane{
+        width: 400px;
+    }
+
+    /* skills section responsive ------------ */
+    .skills_wrapper{
+        justify-content: center;
+    }
+    .skills_left , .skills_right{
+        flex-basis: 75%;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    .skills_title{
+        font-size: 28px;
+    }
+
+    /* contact section responsive ------------ */
+    .contact_informations{
+        flex-basis: 47%;
+    }
+    .contact_right{
+        flex-basis: 50%;
+    }
+    .contact_form div input{
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    /* service section responsive -------------- */ 
+     .single_service {
+        flex-basis: 48%;
+        margin-bottom: 28px;
+    }
+    .single_service_wrapper{
+        transform-origin: initial;
+    }
+    .single_service.active:nth-child(3) {
+        transform: translateX(108%);
+    }
+
+    /* contact section responsive ------------ */
+    .contact_informations{
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+    .contact_right{
+        flex-basis: 90%;
+    }
+    .contact_form div input{
+        flex-basis: 48%;
+    }
+    .contact_wrapper{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:610px) {
+    
+    .sec_subtitle{
+        width: 250px;
+    }
+
+    /* home section responsive  ----------------- */
+    
+    .home_content{
+        margin-left: 10px;
+    }
+
+    /* about seciton responsive ------------------ */
+    .about_item:first-child , .about_item:nth-child(2){
+        flex-basis: 100%;
+        margin-bottom: 25px;
+    }
+    .about_item img{
+        width: 330px;
+        height: 375px;
+    }
+
+    /* service section styling ---------------- */
+    .services_wrapper{
+        justify-content: center;
+    } 
+    .single_service {
+        flex-basis: 75%;
+        margin-bottom: 28px;
+    }
+    .single_service.active{
+        transform: translateX(20%) !important;
+    }
+    .single_service.active .single_service_wrapper{
+        transform: rotateY(-65deg) !important;
+    }
+    .service_explane{
+        left: -150%;
+    }
+    .service_explane{
+        width: 350px;
+    }
+
+    /* project sectoin responsive ----------------- */
+    .project-wrapper{
+        justify-content: center;
+    }
+    .single_project{
+        flex-basis: 75%;
+    }
+
+    /* skills section responsive -----------  */
+    .skills_left , .skills_right{
+        flex-basis: 85%;
+    }
+
+    /* contact section responsive ------------ */
+    .contact_form div input{
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .container{
+        padding: 0 15px;
+    }
+    .sec_subtitle{
+        width: 200px !important;
+    }
+
+    /* home section responsive -------------  */
+    .home_content{
+        margin-left: 0px;
+        overflow: hidden;
+    }
+    #home .hometitle{
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
+    #home .propetion{
+        font-size: 22px;
+    }
+    #home .home_desc{
+        padding-right: 0;
+    }
+
+    /* about section responsive -------------- */
+    .about_item img{
+        width: 250px;
+        height: 300px;
+    }
+    .about_desc{
+        text-align: justify;
+    } 
+
+    /* service section responsive -----------  */
+    section#services .container{
+        overflow: hidden;
+        padding: 15px 15px;
+        padding-top: 35px;
+    }
+    .single_service {
+        flex-basis: 100%;
+        margin-bottom: 28px;
+    }
+    .single_service.active .single_service_wrapper {
+        transform: rotateY(-70deg) !important;
+    }
+    .single_service.active {
+        transform: translateX(5%) !important;
+    }
+    .service_explane.active{
+        left: 50%;
+    }
+    .service_explane{
+        width: 80% !important;
+        transform: translate(-50% , -50%);
+    }
+    /* project section responsive -----------  */
+    .service_explane_items{
+        flex-wrap: nowrap;
+    }
+    h3.service_explane_title{
+        margin-top: 10px;
+    }
+
+    /* skills section responsive -----------  */
+    .skills_left , .skills_right{
+        flex-basis: 100%;
+    }
+    .skills_title{
+        font-size: 25px;
+    }
+    .autoplay .item .testimonial_relation ,
+    .autoplay .item .testimonial_desc  {
+    color: white;
+    }
+    .autoplay .item:before {
+        opacity: 1;
+        visibility: visible;
+    }
+    .autoplay .item .testimonial_man img{
+        width: 101%;
+        height: 100%;
+        border-radius: 0;
+        right: -2px !important;
+        top: 0px;
+    }
+
+    /* contact section responsive------------ */
+    .contact_informations{
+        padding-left: 0;
+    }
+    .contact_icon{
+        font-size: 25px;
+        margin: 0 15px;
+    }
+    .contact_information{
+        margin: 18px 0;
+    }
+    .contact_form_title{
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    /* social links -------- */
+    .social_item.scroll_top , .social_item{
+        right: 10px;
+    }
+    a.social_lick{
+        width: 27px;
+        height: 27px;
+    }
+    .social_ul.social_ul_active{
+        height: 195px;
+    }
+    
+}
+
+@media screen and (max-width:350px) {
+    .container{
+        padding: 0 10px;
+    }
+    /* about section responsive -------------- */
+    .about_item img{
+        width: 220px;
+        height: 270px;
+    }
+    #home .home_desc{
+        font-size: 13px;
+    }
+    .autoplay .item{
+        padding: 20px 15px;
+    }
+
+    /* services section responsive ---------- */
+    .single_project{
+        flex-basis: 90%;
+    }
+    .project_info{
+        padding-top: 15px;
+    }
+
+    /* skills section responsive -----------  */
+    .skills_right{
+        padding: 0;
+    }
+}
