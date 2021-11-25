@@ -140,7 +140,9 @@ let projectLink = [
         "file:///D:/learning%20page/project/youtube_project1/index.html",
         "file:///D:/learning%20page/project/js%20sort%20project/js%20clock%20project/clock.html",
         "file:///D:/learning%20page/project/psd%20to%20html-%20cuda/cuda.html",
-        "https://sajjad126.github.io/snake_game.github.io/index.html"
+        "https://sajjad126.github.io/snake_game.github.io/index.html",
+        "https://sajjad126.github.io/snake_game.github.io/index.html",
+        "https://sajjad126.github.io/car_game.github.io/"
 ];
 
 liveViews.forEach(function(liveView , index){
