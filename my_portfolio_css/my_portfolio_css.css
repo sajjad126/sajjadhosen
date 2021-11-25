@@ -679,6 +679,10 @@ a.project_live:hover > i {
 .view_project.active{
     display: block;
 }
+.view_project.expand{
+    min-width: 100vw;
+    height: 100vh;
+}
 .close_project ,.expand_project {
     width: 25px;
     height: 25px;
