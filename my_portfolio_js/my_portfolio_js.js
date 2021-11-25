@@ -129,7 +129,8 @@ function singleServicesActive(){
 const liveViews = document.querySelectorAll(".project_live"),
       closeView = document.querySelector(".close_project"),
       viewProjects = document.querySelector(".view_project"),
-      projectOverlay = document.querySelector(".project_overlay");
+      projectOverlay = document.querySelector(".project_overlay"),
+      projectExpand = document.querySelector(".expand_project");
 let projectLink = [
         "file:///D:/learning%20page/project/educavo/educavo.html",
         "file:///D:/learning%20page/project/corporx/corporx.html",
@@ -167,6 +168,17 @@ function projectactive(){
     projectOverlay.classList.toggle("active");
     document.body.classList.toggle("scroll_offall");
     viewProjects.classList.toggle("active");
+    
+    viewProjects.classList.remove("expand");
+    projectExpand.querySelector("i").classList.remove("fa-compress");
+    projectExpand.querySelector("i").classList.add("fa-expand");
+}
+
+projectExpand.addEventListener("click",expand);
+function expand(){
+    viewProjects.classList.toggle("expand");
+    projectExpand.querySelector("i").classList.toggle("fa-compress");
+    projectExpand.querySelector("i").classList.toggle("fa-expand");
 }
 
 
