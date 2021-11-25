@@ -679,7 +679,7 @@ a.project_live:hover > i {
 .view_project.active{
     display: block;
 }
-.close_project {
+.close_project ,.expand_project {
     width: 25px;
     height: 25px;
     background: white;
@@ -690,6 +690,24 @@ a.project_live:hover > i {
     top: -1%;
     right: 0;
     transform: translateY(-100%);
+    border: 1px solid rgb(39, 39, 39);
+}
+.expand_project{
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.view_project.expand .close_project{
+    top: 5%;
+    right: 25px;
+}
+.view_project.expand .expand_project{
+    top: 5%;
+    right: 55px;
+}
+.expand_project i{
+    color: var(--main-color);
 }
 .close_project::after,
 .close_project::before{
